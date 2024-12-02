@@ -4,7 +4,7 @@ Star [] cheese = new Star[300] ;
 float ozone = 0 ; 
 float er = 0 ; 
 void setup () {
-
+  
   size ( 750,750); 
   for ( int i = 0 ; i < cheese.length; i ++) {
     cheese[i] = new Star(); 
@@ -12,7 +12,7 @@ void setup () {
 } 
 
 void draw () {
-    background(400); 
+  background(400); 
   sprite.show(); 
   if(controls[0]) {
     sprite.accelerate(0.1);
