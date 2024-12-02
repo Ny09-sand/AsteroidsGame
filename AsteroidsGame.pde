@@ -25,7 +25,7 @@ void draw () {
   }
   if(controls[2] && ozone> er+.5) {
     sprite.the_world();
-    ozone = er;
+    er=ozone;
   }
   for(int i = 0; i < cheese.length; i++) {
     cheese[i].show();
