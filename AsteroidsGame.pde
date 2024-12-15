@@ -11,7 +11,7 @@ ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 //Bullet [] lists = new Bullet[20]; 
 void setup () {
   
-  size ( 1000,1000); 
+  size ( 750, 750); 
   for ( int e = 0 ; e < bankai.length ; e ++ ) {
     bankai[e] = new Asteroid();
     skibidi.add (bankai[e]);
