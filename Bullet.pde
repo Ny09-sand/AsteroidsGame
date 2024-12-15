@@ -16,7 +16,7 @@ class Bullet extends Floater {
       myPointDirection = theship.get_point();
       myXspeed = theship.get_speedx(); 
       myYspeed=theship.get_speedy(); 
-     
+       println("Bullet initialized at: " + myCenterX + ", " + myCenterY);
      
       
   }
