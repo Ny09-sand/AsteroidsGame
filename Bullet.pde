@@ -1,9 +1,8 @@
 class Bullet extends Floater {
  private  float im_tired;
   private float im_so_done;
-  private float please; 
-  private float please_s; 
-  private boolean done_for;
+
+  public boolean done_for;
   Bullet(Spaceship theship){
       myColor=200; 
       done_for= false;
@@ -11,12 +10,10 @@ class Bullet extends Floater {
       im_tired= 22.1; 
       myCenterX = theship.CenterX() ;
       myCenterY = theship.CenterY() ;
-       please = (float)myCenterX;
-       please_s = (float)myCenterY;
       myPointDirection = theship.get_point();
       myXspeed = theship.get_speedx(); 
       myYspeed=theship.get_speedy(); 
-       println("Bullet initialized at: " + myCenterX + ", " + myCenterY);
+       
      
       
   }
