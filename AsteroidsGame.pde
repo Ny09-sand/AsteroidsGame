@@ -122,7 +122,7 @@ public void keyPressed(){
      skibidi.add(bee);
      } sprite.death=false;  
   sprite.win=false;   } 
-  if( keyCode == 87 && sprite.death==false) {
+  if( keyCode == 87 ) {
     controls[0] = true; 
   } else {
   controls [0] = false;}
