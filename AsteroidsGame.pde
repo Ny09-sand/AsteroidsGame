@@ -11,7 +11,7 @@ ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 //Bullet [] lists = new Bullet[20]; 
 void setup () {
   
-  size ( 750,750); 
+  size ( 1000,1000); 
   for ( int e = 0 ; e < bankai.length ; e ++ ) {
     bankai[e] = new Asteroid();
     skibidi.add (bankai[e]);
@@ -52,11 +52,15 @@ void draw () {
     }
   }
   for (int finals = 0 ; finals <  bullets.size(); finals ++) {
-    bullets.get(finals).show();
-    bullets.get(finals).move();
-    bullets.get(finals).accelerate(.1); 
+    Bullet bullet = bullets.get(finals); 
+    bullet.show();
+    bullet.move();
+    bullet.accelerate(.1); 
     for ( int k = 0 ; k < skibidi.size(); k++){
-      
+        
+        if ( Math.abs(skibidi.get(k).CenterY() - sprite.CenterY()) < 20 && Math.abs(skibidi.get(k).CenterX() - sprite.CenterX())<20){
+       sprite.death = true; 
+    }
       if (Math.abs(bullets.get(finals).get_myvalue() - skibidi.get(k).CenterX())<20 && Math.abs(bullets.get(finals).get_myvalues() - skibidi.get(k).CenterY())<20) {
          bullets.remove(finals); 
          skibidi.remove(k);
@@ -84,7 +88,7 @@ void draw () {
     text("O to restart the whole thing or I to continue from \n the center", 30,425);
   } else {
     sprite.move();
-  
+    
     sprite.show();
     ozone += 0.02;
   }}
