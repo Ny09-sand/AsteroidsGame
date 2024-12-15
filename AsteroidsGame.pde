@@ -115,9 +115,7 @@ public void keyPressed(){
   sprite.win=false;
   sprite.back_to_formula(); 
   for ( int o = 0 ; o < 30; o++){
-      
-     Asteroid bee= new Asteroid(); 
-     skibidi.add(bee);
+     skibidi.add(new Asteroid());
      }   } 
   if( keyCode == 87 && sprite.death==false) {
     controls[0] = true; 
