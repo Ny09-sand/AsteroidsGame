@@ -1,8 +1,8 @@
 class Bullet extends Floater {
-  float im_tired;
-  float im_so_done;
-  float please; 
-  float please_s; 
+ private  float im_tired;
+  private float im_so_done;
+  private float please; 
+  private float please_s; 
   private boolean done_for;
   Bullet(Spaceship theship){
       myColor=200; 
