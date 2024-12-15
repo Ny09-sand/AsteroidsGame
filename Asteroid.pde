@@ -1,6 +1,6 @@
 class Asteroid extends Floater{
   protected double hold_thy_speed ; 
-  protected Asteroid(){
+   Asteroid(){
       corners = 4; 
       xCorners = new int[]{((int)(Math.random()*7+10)),((int)(Math.random()*9+10)),((int)(Math.random()*-9-9)),((int)(Math.random()*-9-9))};
       yCorners = new int[]{((int)(Math.random()*7+10)),((int)(Math.random()*-9-10)),((int)(Math.random()*-9-9)),((int)(Math.random()*9+9))};
@@ -16,8 +16,7 @@ class Asteroid extends Floater{
     myPointDirection+= hold_thy_speed;
     myCenterX += myXspeed;    
     myCenterY += myYspeed;     
-
-    //wrap around screen    
+  
     if(myCenterX >width)
     {     
       myXspeed =(int) ( Math.random()*6)-3 ; 
