@@ -6,10 +6,10 @@ class Asteroid extends Floater{
       yCorners = new int[]{((int)(Math.random()*7+10)),((int)(Math.random()*-9-10)),((int)(Math.random()*-9-9)),((int)(Math.random()*9+9))};
   
       hold_thy_speed = Math.random()*8-4; 
-      myCenterX = (int)(Math.random()*750) +1 ; 
-      myCenterY= (int)(Math.random()*750) +1 ; 
-       myXspeed =(int) ( Math.random()*6)-3 ; 
-      myYspeed =(int) ( Math.random()*6)-3 ;  
+      myCenterX = (Math.random()*750) +1 ; 
+      myCenterY= (Math.random()*750) +1 ; 
+       myXspeed = ( Math.random()*6)-3 ; 
+      myYspeed =( Math.random()*6)-3 ;  
       myPointDirection = Math.random()*360+1; 
   } 
     void move () { 
@@ -20,27 +20,27 @@ class Asteroid extends Floater{
     //wrap around screen    
     if(myCenterX >width)
     {     
-      myXspeed =(int) ( Math.random()*6)-3 ; 
-      myYspeed =(int) ( Math.random()*6)-3 ; 
+      myXspeed = ( Math.random()*6)-3 ; 
+      myYspeed = ( Math.random()*6)-3 ; 
       myCenterX = 0;    
     }    
     else if (myCenterX<0)
     {     
-       myXspeed =(int) ( Math.random()*6)-3 ; 
-      myYspeed =(int) ( Math.random()*6)-3 ; 
+       myXspeed = ( Math.random()*6)-3 ; 
+      myYspeed = ( Math.random()*6)-3 ; 
       myCenterX = width;    
     }    
     if(myCenterY >height)
     {    
-      myXspeed =(int) ( Math.random()*6)-3 ; 
-      myYspeed =(int) ( Math.random()*6)-3 ; 
+      myXspeed = ( Math.random()*6)-3 ; 
+      myYspeed = ( Math.random()*6)-3 ; 
       myCenterY = 0;    
     } 
     
     else if (myCenterY < 0)
     {     
-      myXspeed =(int) ( Math.random()*6)-3 ; 
-      myYspeed =(int) ( Math.random()*6)-3 ; 
+      myXspeed =( Math.random()*6)-3 ; 
+      myYspeed = ( Math.random()*6)-3 ; 
       myCenterY = height;    
     }   
   } 
