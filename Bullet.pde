@@ -4,7 +4,7 @@ class Bullet extends Floater {
 
   public boolean done_for;
   Bullet(Spaceship theship){
-      myColor=200; 
+      myColor=10; 
       done_for= false;
       im_so_done= 22.1; 
       im_tired= 22.1; 
