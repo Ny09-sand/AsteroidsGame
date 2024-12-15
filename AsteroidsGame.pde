@@ -71,7 +71,7 @@ void draw () {
   if (skibidi.size() == 0 ){
     sprite.win = true;
   }
-    if (sprite.death==false && sprite.win==true){
+   if ( sprite.win==true){
       sprite.show();
    sprite.move();
    textSize(30);
@@ -84,8 +84,8 @@ void draw () {
   } else {
     sprite.move();
   
-  sprite.show();
-  ozone += 0.02;
+    sprite.show();
+    ozone += 0.02;
   }}
   
  
