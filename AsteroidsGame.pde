@@ -56,6 +56,7 @@ void draw () {
     bullets.get(finals).move();
     bullets.get(finals).accelerate(.1); 
     for ( int k = 0 ; k < skibidi.size(); k++){
+      
       if (Math.abs(bullets.get(finals).get_myvalue() - skibidi.get(k).CenterX())<20 && Math.abs(bullets.get(finals).get_myvalues() - skibidi.get(k).CenterY())<20) {
          bullets.remove(finals); 
          skibidi.remove(k);
@@ -92,13 +93,12 @@ void draw () {
 
 public void keyPressed(){
   if ( keyCode== 79 && sprite.death==true){
-  sprite.death=false;  
   sprite.back_to_formula(); 
   skibidi.clear();
   for ( int o = 0 ; o < 30; o++){
      skibidi.add(new Asteroid());   
   }  
-   counter = 0 ;  
+    sprite.death=false;  
  }
   if ( keyCode == 32 && sprite.death!=true ){
      Bullet projectile = new Bullet(sprite);
@@ -107,15 +107,17 @@ public void keyPressed(){
   }
 
   if (keyCode== 73 && sprite.death==true){
+    sprite.back_to_formula(); 
     sprite.death=false;  
-  sprite.win=false;
-  sprite.back_to_formula(); 
+    sprite.win=false;
 } if (keyCode==73 && sprite.win==true){
   sprite.death=false;  
   sprite.win=false;
   sprite.back_to_formula(); 
   for ( int o = 0 ; o < 30; o++){
-     skibidi.add(new Asteroid());
+      
+     Asteroid bee= new Asteroid(); 
+     skibidi.add(bee);
      }   } 
   if( keyCode == 87 && sprite.death==false) {
     controls[0] = true; 
