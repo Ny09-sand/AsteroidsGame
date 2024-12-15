@@ -1,5 +1,5 @@
 class Asteroid extends Floater{
-  protected double hold_thy_speed ; 
+   private  double hold_thy_speed ; 
   protected Asteroid(){
       corners = 4; 
       xCorners = new int[]{((int)(Math.random()*7+10)),((int)(Math.random()*9+10)),((int)(Math.random()*-9-9)),((int)(Math.random()*-9-9))};
@@ -50,5 +50,13 @@ class Asteroid extends Floater{
   public double CenterX() {
     return myCenterX;
   } 
+  public void back_to_formula(){
+    hold_thy_speed = Math.random()*8-4; 
+    myCenterX = (int)(Math.random()*750) +1 ; 
+    myCenterY= (int)(Math.random()*750) +1 ; 
+    myXspeed =(int) ( Math.random()*6)-3 ; 
+    myYspeed =(int) ( Math.random()*6)-3 ;  
+    myPointDirection = Math.random()*360+1;
+  }
   
 }
